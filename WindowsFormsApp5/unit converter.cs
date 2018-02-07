@@ -21,7 +21,8 @@ namespace WindowsFormsApp5
             {"m", 1 },
             {"km", 1e3 },
             {"Mm", 1e6 },
-            {"Gm", 1e9 }
+            {"Gm", 1e9 }
+
         };
         public Form1()
         {
@@ -33,7 +34,8 @@ namespace WindowsFormsApp5
             }
             comboBox1.SelectedIndex = 4;
             comboBox2.SelectedIndex = 4;
-            update();
+            update();
+
         }
         void update()
         {
@@ -50,18 +52,25 @@ namespace WindowsFormsApp5
         }
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
+         
+        }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
             update();
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-            {
-                update();
-            }
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-            {
-                update();
-            }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            update();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            update();
+        }
+    
 
     }
 }
